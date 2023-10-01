@@ -9,13 +9,13 @@ import convo from "../../Assets/image/convo.png";
 
 const Homepage = () => {
   const [toggleDev, setToggleDev] = useState(true);
-  const [toggleGaming, setToggleGamingSec] = useState(true);
+  const [toggleStreaming, setToggleStreamingSec] = useState(true);
 
   const toggleDevSec = () => {
     setToggleDev(!toggleDev);
   };
-  const toggleGamingSec = () => {
-    setToggleGamingSec(!toggleGaming);
+  const toggleStreamingSec = () => {
+    setToggleStreamingSec(!toggleStreaming);
   };
 
   return (
@@ -25,8 +25,9 @@ const Homepage = () => {
           Yassinos Castro <span className="aka">aka</span> Yassinos
         </p>
         <p className="descTitle">
-          <a href="#dev-sec"> Developer</a> |<a href="#gamer-sec"> Gamer</a> |
-          <a href="#streamer-sec"> Streamer</a> |
+          <a href="#dev-sec"> Developer</a> |
+          <a href="#Streaming-sec"> Streamer</a> |
+          <a href="#Gamer-sec"> Gamer</a> |
           <a href="#TrueLove-sec"> Cars & Bikes Lover</a>
         </p>
       </div>
@@ -184,8 +185,8 @@ const Homepage = () => {
             </div>
           </div>
         </div>
-        <span className="toggleDevSec" onClick={toggleGamingSec}>
-          ➤ Gaming{" "}
+        <span className="toggleDevSec" onClick={toggleStreamingSec}>
+          ➤ Streaming
           <span
             style={{ color: "grey", fontSize: "0.7em", marginLeft: "50px" }}
           >
@@ -194,9 +195,9 @@ const Homepage = () => {
           <hr className="hrLine" />
         </span>
         <div
-          className="Gamer flexStuff"
-          id="gamer-sec"
-          style={toggleGaming ? {} : { display: "none" }}
+          className="StreamingSec flexStuff"
+          id="Streaming-sec"
+          style={toggleStreaming ? {} : { display: "none" }}
         >
           <div className="desc">
             <p className="descP">
@@ -217,14 +218,14 @@ const Homepage = () => {
           <div className="Streaming">
             <iframe
               src="https://player.twitch.tv/?channel=yassinos08&parent=www.example.com&muted=true"
-              height="378"
-              width="620"
+              height="300"
+              width="500"
               allowfullscreen
               title="Yassinos'S Twitch Channel"
             />
             <iframe
-              height="378"
-              width="620"
+              height="300"
+              width="500"
               src="https://player.trovo.live/embed/player?streamername=yassinos&autoplay=1"
               allowfullscreen
               title="Yassinos'S Trovo Channel"
@@ -232,15 +233,15 @@ const Homepage = () => {
           </div>
         </div>
         <span className="toggleDevSec" onClick={toggleDevSec}>
-          ➤ Streaming{" "}
+          ➤ Gaming
           <span
             style={{ color: "grey", fontSize: "0.7em", marginLeft: "20px" }}
           >
             {"<-"} click to hide/show
-          </span>{" "}
+          </span>
           <hr className="hrLine" />
         </span>
-        <div className="Streamer flexStuff" id="streamer-sec"></div>
+        <div className="Gamer flexStuff" id="Gamer-sec"></div>
       </div>
     </div>
   );
