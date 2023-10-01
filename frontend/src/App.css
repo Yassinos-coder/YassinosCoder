@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+@font-face {
+  font-family: 'Hackout'; /* Give your font a unique name */
+  src: url(./Assets/fonts/Hackout.otf) format('opentype');
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Source Code Pro', monospace;
+  font-family: 'Hackout';
 }
