@@ -213,25 +213,22 @@ const Homepage = () => {
               and I look forward to what the future holds as I continue to share
               my gaming adventures with the world.
             </p>
-            <div className="twitch">
-              <iframe
-                src="https://player.twitch.tv/?channel=yassinos08&parent=www.yassinoscoder.codes"
-                frameborder="0"
-                allowfullscreen="true"
-                scrolling="no"
-                height="378"
-                width="620"
-              ></iframe>
-            </div>
-            <div className="trovo">
-              <iframe
-                height="378"
-                width="620"
-                src="https://player.trovo.live/embed/player?streamername=Yassinos&autoplay=1"
-                frameborder="0"
-                allowfullscreen
-              ></iframe>
-            </div>
+          </div>
+          <div className="Streaming">
+            <iframe
+              src="https://player.twitch.tv/?channel=yassinos08&parent=www.example.com&muted=true"
+              height="378"
+              width="620"
+              allowfullscreen
+              title="Yassinos'S Twitch Channel"
+            />
+            <iframe
+              height="378"
+              width="620"
+              src="https://player.trovo.live/embed/player?streamername=yassinos&autoplay=1"
+              allowfullscreen
+              title="Yassinos'S Trovo Channel"
+            />
           </div>
         </div>
         <span className="toggleDevSec" onClick={toggleDevSec}>
