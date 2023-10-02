@@ -16,7 +16,7 @@ import { BiSolidDownArrow, BiSolidRightArrow } from "react-icons/bi";
 
 const Homepage = () => {
   const [toggleDev, setToggleDev] = useState(true);
-  const [toggleStreaming, setToggleStreamingSec] = useState(true);
+  const [toggleStreaming, setToggleStreamingSec] = useState(false);
   const [toggleGamer, setToggleGamingSec] = useState(true);
 
   const toggleDevSec = () => {
