@@ -245,7 +245,7 @@ const Homepage = () => {
           </div>
           <div className="Streaming">
             <iframe
-              src="https://player.twitch.tv/?channel=yassinos08&parent=www.example.com&muted=true"
+              src="https://player.twitch.tv/?channel=yassinos08&parent=yassinoscoder.codes&muted=true"
               height="300"
               width="500"
               allowfullscreen
