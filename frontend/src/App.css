@@ -17,26 +17,6 @@ body {
 }
 
 .App {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-}
-
-.footer {
-  background-color: black;
-  position: sticky;
-  height: 5vh;
-  bottom: 0;
-}
-
-.footer > p {
-  position: relative;
-  text-align: center;
-  top: 10px;
-  color: white;
-} 
-
-.footer > p > a {
-  color: orangered;
-  text-decoration: none;
 }

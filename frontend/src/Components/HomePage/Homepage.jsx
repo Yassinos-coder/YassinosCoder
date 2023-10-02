@@ -65,10 +65,11 @@ const Homepage = () => {
             <div className="project1">
               <Card
                 style={{
-                  width: "25rem",
+                  width: "20rem",
                   backgroundColor: "black",
                   color: "white",
                 }}
+                className="btscard"
               >
                 <Card.Img
                   variant="top"
@@ -76,7 +77,7 @@ const Homepage = () => {
                   style={{ backgroundColor: "grey" }}
                 />
                 <Card.Body>
-                  <Card.Text>
+                  <Card.Text className="textDescForEachCard">
                     School Management Platform is a web-based system dedicated
                     for schools to help manage all their business from
                     administrators, teachers and students. The platform was
@@ -109,10 +110,11 @@ const Homepage = () => {
               {" "}
               <Card
                 style={{
-                  width: "30rem",
+                  width: "20rem",
                   backgroundColor: "black",
                   color: "white",
                 }}
+                className="btscard"
               >
                 <Card.Img
                   variant="top"
@@ -157,10 +159,11 @@ const Homepage = () => {
               {" "}
               <Card
                 style={{
-                  width: "25rem",
+                  width: "20rem",
                   backgroundColor: "black",
                   color: "white",
                 }}
+                className="btscard"
               >
                 <Card.Img
                   variant="top"
