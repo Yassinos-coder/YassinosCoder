@@ -18,7 +18,6 @@ const Homepage = () => {
   const [toggleDev, setToggleDev] = useState(true);
   const [toggleStreaming, setToggleStreamingSec] = useState(true);
   const [toggleGamer, setToggleGamingSec] = useState(true);
-  const [arrowGaming, setArrowGaming] = useState(BiSolidDownArrow);
 
   const toggleDevSec = () => {
     setToggleDev(!toggleDev);
@@ -28,11 +27,6 @@ const Homepage = () => {
   };
   const toggleGamerSec = () => {
     setToggleGamingSec(!toggleGamer);
-    if (toggleGamer) {
-      setArrowGaming(BiSolidDownArrow);
-    } else {
-      setArrowGaming(BiSolidRightArrow);
-    }
   };
 
   return (
@@ -43,14 +37,14 @@ const Homepage = () => {
         </p>
         <p className="descTitle">
           <a href="#dev-sec"> Developer</a> |
-          <a href="#Streaming-sec"> Streamer</a> |
-          <a href="#Gamer-sec"> Gamer</a> |
+          <a href="#streaming-sec"> Streamer</a> |
+          <a href="#gamer-sec"> Gamer</a> |
           <a href="#TrueLove-sec"> Cars & Bikes Lover</a>
         </p>
       </div>
 
       <div className="main">
-        <span className="toggleDevSec" onClick={toggleDevSec}>
+        <span id="dev-sec" className="toggleDevSec" onClick={toggleDevSec}>
           <span className="arrow">
             {" "}
             {toggleDev ? <BiSolidDownArrow /> : <BiSolidRightArrow />}{" "}
@@ -65,7 +59,6 @@ const Homepage = () => {
         </span>
         <div
           className="developer flexStuff"
-          id="dev-sec"
           style={toggleDev ? {} : { display: "none" }}
         >
           <div className="projects">
@@ -206,7 +199,11 @@ const Homepage = () => {
             </div>
           </div>
         </div>
-        <span className="toggleDevSec" onClick={toggleStreamingSec}>
+        <span
+          id="streaming-sec"
+          className="toggleDevSec"
+          onClick={toggleStreamingSec}
+        >
           <span className="arrow">
             {" "}
             {toggleStreaming ? (
@@ -225,7 +222,6 @@ const Homepage = () => {
         </span>
         <div
           className="StreamingSec flexStuff"
-          id="Streaming-sec"
           style={toggleStreaming ? {} : { display: "none" }}
         >
           <div className="desc">
@@ -261,7 +257,7 @@ const Homepage = () => {
             />
           </div>
         </div>
-        <span className="toggleDevSec" onClick={toggleGamerSec}>
+        <span id="gamer-sec" className="toggleDevSec" onClick={toggleGamerSec}>
           <span className="arrow">
             {" "}
             {toggleGamer ? <BiSolidDownArrow /> : <BiSolidRightArrow />}{" "}
@@ -276,7 +272,6 @@ const Homepage = () => {
         </span>
         <div
           className="Gamer flexStuff"
-          id="Gamer-sec"
           style={toggleGamer ? {} : { display: "none" }}
         >
           <div className="gamerTitle">
@@ -327,12 +322,6 @@ const Homepage = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div className="footer">
-        <p>
-          Developed with ❤️ by{" "}
-          <a href="https://github.com/Yassinos-coder">Yassinos-Coder</a>
-        </p>
       </div>
     </div>
   );

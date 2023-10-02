@@ -10,6 +10,12 @@ function App() {
           <Route index element={<Homepage />} />
         </Routes>
       </BrowserRouter>
+      <footer className="footer">
+        <p>
+          Developed with ❤️ by{" "}
+          <a href="https://github.com/Yassinos-coder">Yassinos-Coder</a>
+        </p>
+      </footer>
     </div>
   );
 }
