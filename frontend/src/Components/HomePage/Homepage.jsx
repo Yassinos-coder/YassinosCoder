@@ -7,15 +7,32 @@ import smp from "../../Assets/image/smp.png";
 import outlawalert from "../../Assets/image/outlawalert.png";
 import convo from "../../Assets/image/convo.png";
 
+import r6s from "../../Assets/image/r6s.jpg";
+import pubg from "../../Assets/image/pubg.png";
+import thecrew2 from "../../Assets/image/thecrew2.jpg";
+import battlefield from "../../Assets/image/battlefield.jpg";
+
+import { BiSolidDownArrow, BiSolidRightArrow } from "react-icons/bi";
+
 const Homepage = () => {
   const [toggleDev, setToggleDev] = useState(true);
   const [toggleStreaming, setToggleStreamingSec] = useState(true);
+  const [toggleGamer, setToggleGamingSec] = useState(true);
+  const [arrowGaming, setArrowGaming] = useState(BiSolidDownArrow);
 
   const toggleDevSec = () => {
     setToggleDev(!toggleDev);
   };
   const toggleStreamingSec = () => {
     setToggleStreamingSec(!toggleStreaming);
+  };
+  const toggleGamerSec = () => {
+    setToggleGamingSec(!toggleGamer);
+    if (toggleGamer) {
+      setArrowGaming(BiSolidDownArrow);
+    } else {
+      setArrowGaming(BiSolidRightArrow);
+    }
   };
 
   return (
@@ -34,7 +51,11 @@ const Homepage = () => {
 
       <div className="main">
         <span className="toggleDevSec" onClick={toggleDevSec}>
-          ➤ Developer{" "}
+          <span className="arrow">
+            {" "}
+            {toggleDev ? <BiSolidDownArrow /> : <BiSolidRightArrow />}{" "}
+          </span>{" "}
+          Developer{" "}
           <span
             style={{ color: "grey", fontSize: "0.7em", marginLeft: "20px" }}
           >
@@ -186,7 +207,15 @@ const Homepage = () => {
           </div>
         </div>
         <span className="toggleDevSec" onClick={toggleStreamingSec}>
-          ➤ Streaming
+          <span className="arrow">
+            {" "}
+            {toggleStreaming ? (
+              <BiSolidDownArrow />
+            ) : (
+              <BiSolidRightArrow />
+            )}{" "}
+          </span>{" "}
+          Streaming
           <span
             style={{ color: "grey", fontSize: "0.7em", marginLeft: "50px" }}
           >
@@ -232,8 +261,12 @@ const Homepage = () => {
             />
           </div>
         </div>
-        <span className="toggleDevSec" onClick={toggleDevSec}>
-          ➤ Gaming
+        <span className="toggleDevSec" onClick={toggleGamerSec}>
+          <span className="arrow">
+            {" "}
+            {toggleGamer ? <BiSolidDownArrow /> : <BiSolidRightArrow />}{" "}
+          </span>
+          Gaming
           <span
             style={{ color: "grey", fontSize: "0.7em", marginLeft: "20px" }}
           >
@@ -241,7 +274,65 @@ const Homepage = () => {
           </span>
           <hr className="hrLine" />
         </span>
-        <div className="Gamer flexStuff" id="Gamer-sec"></div>
+        <div
+          className="Gamer flexStuff"
+          id="Gamer-sec"
+          style={toggleGamer ? {} : { display: "none" }}
+        >
+          <div className="gamerTitle">
+            <p style={{ textAlign: "center" }}>
+              {" "}
+              Games I play, Feel free add me if you wanna play!{" "}
+            </p>
+            <div className="games">
+              <div className="game1">
+                <div className="spanOnImg">
+                  <p>Tom Clancy's Rainbow | Six Siege</p>
+                  <p>
+                    Username:{" "}
+                    <span style={{ color: "yellow" }}>yassinos08</span>{" "}
+                  </p>
+                </div>
+                <img src={r6s} alt="" />
+              </div>
+              <div className="game2">
+                <div className="spanOnImg">
+                  <p>Player'S Unknown Battleground</p>
+                  <p>
+                    Username: <span style={{ color: "yellow" }}>yassinos</span>{" "}
+                  </p>
+                </div>
+                <img src={pubg} alt="" />
+              </div>
+              <div className="game3">
+                <div className="spanOnImg">
+                  <p>The Crew 2</p>
+                  <p>
+                    Username:{" "}
+                    <span style={{ color: "yellow" }}>yassinos08</span>{" "}
+                  </p>
+                </div>
+                <img src={thecrew2} alt="" />
+              </div>
+              <div className="game4">
+                <div className="spanOnImg">
+                  <p>BattleField V</p>
+                  <p>
+                    Username:{" "}
+                    <span style={{ color: "yellow" }}>YassinosMA</span>{" "}
+                  </p>
+                </div>
+                <img src={battlefield} alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="footer">
+        <p>
+          Developed with ❤️ by{" "}
+          <a href="https://github.com/Yassinos-coder">Yassinos-Coder</a>
+        </p>
       </div>
     </div>
   );
