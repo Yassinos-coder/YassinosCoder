@@ -15,9 +15,9 @@ import battlefield from "../../Assets/image/battlefield.jpg";
 import { BiSolidDownArrow, BiSolidRightArrow } from "react-icons/bi";
 
 const Homepage = () => {
-  const [toggleDev, setToggleDev] = useState(true);
+  const [toggleDev, setToggleDev] = useState(false);
   const [toggleStreaming, setToggleStreamingSec] = useState(false);
-  const [toggleGamer, setToggleGamingSec] = useState(true);
+  const [toggleGamer, setToggleGamingSec] = useState(false);
 
   const toggleDevSec = () => {
     setToggleDev(!toggleDev);
@@ -49,7 +49,7 @@ const Homepage = () => {
             {" "}
             {toggleDev ? <BiSolidDownArrow /> : <BiSolidRightArrow />}{" "}
           </span>{" "}
-          Developer{" "}
+          Dev Projects{" "}
           <span
             style={{ color: "grey", fontSize: "0.7em", marginLeft: "20px" }}
           >
