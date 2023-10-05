@@ -42,6 +42,26 @@
   font-size: 1em;
 }
 
+.socials {
+  text-align: center;
+  font-size: 1.6em;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 20px;
+  color: rgb(202, 105, 105);
+
+}
+
+.socials > svg {
+  cursor: pointer;
+}
+
+.socials > svg:hover {
+  color: orangered;
+  scale: 1.4;
+}
+
 .main {
   position: relative;
   height: -moz-fit-content;

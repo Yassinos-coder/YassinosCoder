@@ -12,7 +12,9 @@ import pubg from "../../Assets/image/pubg.png";
 import thecrew2 from "../../Assets/image/thecrew2.jpg";
 import battlefield from "../../Assets/image/battlefield.jpg";
 
-import { BiSolidDownArrow, BiSolidRightArrow } from "react-icons/bi";
+import { BiLogoGmail, BiSolidDownArrow, BiSolidRightArrow } from "react-icons/bi";
+import {AiFillGithub, AiFillInstagram, AiFillLinkedin} from 'react-icons/ai'
+import {BsTwitch} from 'react-icons/bs'
 
 const Homepage = () => {
   const [toggleDev, setToggleDev] = useState(false);
@@ -41,6 +43,13 @@ const Homepage = () => {
           <a href="#gamer-sec"> Gamer</a> |
           <a href="#TrueLove-sec"> Cars & Bikes Lover</a>
         </p>
+        <div className="socials">
+          <AiFillGithub onClick={() => { window.open("https://github.com/Yassinos-coder");}}/>
+          <AiFillLinkedin onClick={() => { window.open("https://www.linkedin.com/in/yassine-castro-6a6ba7237/");}}/>
+          <AiFillInstagram onClick={() => { window.open("https://www.instagram.com/yassinos.js/");}}/>
+          <BsTwitch onClick={() => { window.open("https://www.twitch.tv/yassinos08");}}/>
+          <BiLogoGmail onClick={() => { window.open("mailto:castroyassine0@Gmail.com");}}/>
+        </div>
       </div>
 
       <div className="main">
