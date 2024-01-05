@@ -5,3 +5,69 @@
   align-items: center;
   flex-direction: column;
 }
+
+.header {
+  width: 100%;
+  background-color: black;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  position: sticky;
+  color: white;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.headerDiv1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.headerDiv1 > img {
+  width: 100px;
+  aspect-ratio: 1/1;
+}
+
+.headerDiv1 > p {
+  font-size: 1.5em;
+}
+
+nav {
+  display: flex;
+  gap: 50px;
+}
+
+.navLinks, .navLinks-active {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2em;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.4s ease-in-out;
+}
+
+.navLinks::before, .navLinks-active::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: orangered;
+  transform: translateX(-100%);
+  transition: transform 0.4s ease-in-out;
+}
+
+.navLinks:hover, .navLinks-active {
+  color: orangered;
+}
+
+.navLinks:hover::before, .navLinks-active::before {
+  transform: translateX(0%);
+}
+
+.sections {
+
+}
