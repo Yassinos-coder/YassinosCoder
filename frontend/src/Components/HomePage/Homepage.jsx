@@ -38,7 +38,7 @@ const Homepage = () => {
         <Outlet />
       </main>
       <footer className="footer">
-        <p>No Use Of Templates | Keep it simple! | By Yassine Castro</p>
+        <p>Non-Responsive | No Use Of Templates | Keep it simple! | By Yassine Castro</p>
       </footer>
     </div>
   );
