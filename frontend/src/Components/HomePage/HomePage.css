@@ -76,6 +76,7 @@ nav {
   display: flex;
   flex-direction: column;
   margin-top: 100px;
+  margin-bottom: 31px;
 }
 
 .Aboutme {
@@ -185,4 +186,16 @@ i:hover {
 .projectDesc {
   width: 800px;
   text-align: left;
+}
+
+/* FOOTER */
+.footer {
+  background-color: black;
+  height: 50px;
+  width: 100%;
+  color: white;
+}
+
+.footer > p {
+  text-align: center;
 }
