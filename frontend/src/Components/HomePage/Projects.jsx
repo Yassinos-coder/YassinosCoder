@@ -28,26 +28,28 @@ function Projects() {
     },
   ];
   return (
-    <div className="projects">
-      {projects.map((project, index) => (
-        <>
-          <div className={`projectDiv project${index}`}>
-            <p className="projectTitle">
-              {project.title}
-              <span className="disclaimer">(Backend Servers Offline)</span>
-            </p>
-            <a href={project.link} target="_blank" rel="noopener noreferrer">
+  <div className="projects">
+    {projects.map((project, index) => (
+      <div key={index} className={`projectDiv project${index}`}>
+        <p className="projectTitle">
+          {project.title}
+        </p>
+        <div className="projectLinks">
+          <span className={project.serversOffline ? "disabledLink" : ""}>
+            <a href={project.link} target="_blank" rel="noopener noreferrer" disabled={project.serversOffline}>
               Visit Project
-              <a href={project.git} target="_blank" rel="noopener noreferrer">
-                Github Repo
-              </a>
             </a>
-            <p className="projectDesc">{project.desc}</p>
-          </div>
-        </>
-      ))}
-    </div>
-  );
+          </span>
+          <a href={project.git} target="_blank" rel="noopener noreferrer">
+            Github Repo
+          </a>
+        </div>
+        <p className="projectDesc">{project.desc}</p>
+      </div>
+    ))}
+  </div>
+);
+
 }
 
 export default Projects;
