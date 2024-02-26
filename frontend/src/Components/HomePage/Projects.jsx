@@ -27,29 +27,34 @@ function Projects() {
       desc: "Meet Convo App, a dynamic chat application that redefines the way we connect. Built with the powerful MERN stack, it offers a seamless and intuitive messaging experience. Whether for personal chats or professional collaboration, Convo App brings users together with efficiency and ease. Its robust design ensures a reliable and engaging communication platform for everyone. Dive into the world of Convo App, where conversations come to life.",
     },
   ];
-  return (
-  <div className="projects">
-    {projects.map((project, index) => (
-      <div key={index} className={`projectDiv project${index}`}>
-        <p className="projectTitle">
-          {project.title}
-        </p>
-        <div className="projectLinks">
-          <span className={project.serversOffline ? "disabledLink" : ""}>
-            <a href={project.link} target="_blank" rel="noopener noreferrer" disabled={project.serversOffline}>
-              Visit Project
-            </a>
-          </span>
-          <a href={project.git} target="_blank" rel="noopener noreferrer">
-            Github Repo
-          </a>
-        </div>
-        <p className="projectDesc">{project.desc}</p>
-      </div>
-    ))}
-  </div>
-);
 
+  // Add serversOffline property to all projects and set it to true to disable all links
+  projects.forEach(project => {
+    project.serversOffline = true;
+  });
+
+  return (
+    <div className="projects">
+      {projects.map((project, index) => (
+        <div key={index} className={`projectDiv project${index}`}>
+          <p className="projectTitle">
+            {project.title}
+          </p>
+          <div className="projectLinks">
+            <span className="disabledLink">
+              <a href={project.link} target="_blank" rel="noopener noreferrer" disabled={project.serversOffline}>
+                Visit Project
+              </a>
+            </span>
+            <a href={project.git} target="_blank" rel="noopener noreferrer">
+              Github Repo
+            </a>
+          </div>
+          <p className="projectDesc">{project.desc}</p>
+        </div>
+      ))}
+    </div>
+  );
 }
 
 export default Projects;
